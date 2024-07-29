@@ -61,6 +61,9 @@ namespace TechTalk.SpecFlow.RuntimeTests.AssistTests
 
                 typeof(ArrayValueRetriever),
                 typeof(ListValueRetriever),
+#if NET6_0_OR_GREATER
+                typeof(DateOnlyValueRetriever),
+#endif
             };
 
             var service = new Service();

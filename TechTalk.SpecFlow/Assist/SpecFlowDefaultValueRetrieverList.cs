@@ -30,7 +30,10 @@ namespace TechTalk.SpecFlow.Assist
                 new DecimalValueRetriever(),
                 new CharValueRetriever(),
                 new DateTimeOffsetValueRetriever(),
-                new UriValueRetriever()
+                new UriValueRetriever(),
+#if NET6_0_OR_GREATER
+                new DateOnlyValueRetriever()
+#endif
             }, false)
         {
         }
